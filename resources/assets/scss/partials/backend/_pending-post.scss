@@ -1,0 +1,242 @@
+#page_content .table-responsive {
+  padding: 0 20px;
+}
+
+#page_content table {
+  font-family: 'Cairo' , sans-serif;
+}
+
+#page_content table thead {
+
+  background-image : -webkit-linear-gradient(top , #efb800 0, #efb800 10% , #ffc501 );
+
+  background-image : linear-gradient(top , #efb800 0, #efb800 10% , #ffc501 );
+  color: black;
+}
+
+#page_content table thead th {
+  text-align: center;
+}
+
+#page_content table tbody td{
+  text-align: center;
+  line-height: 40px;
+  border: 1px solid #d0cccc;
+}
+
+#page_content table tbody tr:nth-of-type(even) {
+  background-color: #ede9e9;
+}
+
+#page_content table tbody tr:nth-of-type(even) td {
+  box-shadow: inset 0 0 10px 1px #d0cbcb;
+}
+
+#page_content table tbody img {
+  max-height: 40px;
+}
+
+#page_content table tbody a.btn.fa {
+  background-color: #00305B;
+  color: white;
+  border: 0;
+}
+
+#page_content table tbody a.btn.fa:active ,
+#page_content table tbody a.btn.fa:focus {
+  outline: 0;
+}
+
+#edit_modal ,
+#add_categories_modal ,
+#edit_categories_modal ,
+#image_view_modal {
+  text-align: left;
+  font-family: 'Cairo' , sans-serif;
+}
+
+#edit_modal .modal-header ,
+#add_categories_modal .modal-header,
+#edit_categories_modal .modal-header ,
+#image_view_modal .modal-header {
+  background-color: #00305B;
+  color: white;
+  max-height: 60px;
+  line-height: 60px;
+}
+
+#image_view_modal .modal-header {
+  border-bottom: 0;
+}
+
+#edit_modal .modal-header h4.modal-title ,
+#add_categories_modal .modal-header h4.modal-title ,
+#edit_categories_modal .modal-header h4.modal-title ,
+#image_view_modal  .modal-header h4.modal-title{
+  margin: 0;
+  font-size: 1.6em;
+}
+
+#edit_modal .modal-header button.close ,
+#add_categories_modal .modal-header button.close ,
+#edit_categories_modal .modal-header button.close ,
+#image_view_modal  .modal-header button.close{
+  color: white;
+}
+
+#edit_modal .modal-body {
+  padding: 0;
+  min-height: 500px;
+}
+
+#add_categories_modal .modal-body ,
+#edit_categories_modal .modal-body ,
+#image_view_modal  .modal-body{
+  padding: 0;
+}
+
+#edit_modal .modal-body form ,
+#add_categories_modal .modal-body form ,
+#edit_categories_modal .modal-body form {
+  padding: 30px 40px;
+}
+
+#edit_modal .modal-body .tag_group .input_container {
+  position: relative;
+}
+
+#edit_modal .modal-body .tag_group .input_container input {
+  width: 600px;
+}
+
+#edit_modal .modal-body .tag_group .input_container button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  border-radius: 0 5px 5px 0;
+}
+
+#edit_modal .modal-body .tag_group label {
+  display: block;
+}
+
+#edit_modal .modal-body  button ,
+#add_categories_modal .modal-body  button ,
+#edit_categories_modal .modal-body  button {
+  background-color: #00305B;
+  color: white;
+  border: 0;
+}
+
+
+#post_categories_list {
+  margin: 0 auto;
+  list-style: none;
+  padding: 0;
+  position: relative;
+}
+
+#post_categories_list > li > a {
+  display: block;
+  padding-left: 1em;
+  height: 2.5em;
+  line-height: 2.5em;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid #d0cdcd;
+  text-decoration: none;
+  color: black;
+}
+
+#post_categories_list span.glyphicon {
+  position: absolute;
+  right: 1em;
+  top: 1.2em;
+  font-size: .8em;
+  color: #4d4b4b;
+}
+
+#post_categories_list li ul {
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  max-height: 150px;
+  overflow: auto;
+}
+
+#post_categories_list li ul li {
+  height: 2em;
+  line-height: 2em;
+  padding-left: 1em;
+  cursor: pointer;
+}
+
+#post_categories_list li ul li:hover {
+  background-color: #d6d6d6;
+}
+
+#post_categories_field{
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  opacity: 0;
+  position: absolute;
+}
+
+
+#image_view_modal img {
+  width: 600px;
+  height: 500px;
+}
+
+
+#edit_modal .modal-dialog .form-group:last-of-type ,
+#add_categories_modal .modal-dialog .form-group:last-of-type ,
+#edit_categories_modal .modal-dialog .form-group:last-of-type {
+  text-align: right;
+}
+
+#edit_modal .modal-dialog .form-group:last-of-type a.btn {
+  background-color: #a00404;
+  border: none;
+  color: white;
+}
+
+#edit_modal .modal-dialog .form-group:last-of-type button {
+  background-color: green;
+  color: white;
+}
+
+#page_content ol.pagination {
+  margin-left: 20px;
+}
+
+#page_content ol.pagination a {
+  color: #333;
+}
+
+#page_content ol.pagination li.active a {
+  background-color: #00305B;
+  color:white;
+}
+
+#page_content .field_container {
+  position: relative;
+}
+
+#edit_categories_modal {
+  background-color: transparent !important;
+}
+
+#page_content .field_container a.btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 0 5px 5px 0;
+  background-color: #00305B;
+  color: white;
+}

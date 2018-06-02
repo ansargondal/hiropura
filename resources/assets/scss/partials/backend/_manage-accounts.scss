@@ -1,0 +1,213 @@
+
+#page_content .row {
+  text-align: center;
+}
+
+#page_content table thead {
+
+  background-image : -webkit-linear-gradient(top , #00274a 0, #00274a 10% , #00305B );
+  background-image : linear-gradient(top , #00274a 0, #00274a 10% , #00305B );
+  color: white;
+}
+
+#edit_modal .modal-dialog .form-group:last-of-type button {
+  background-color: #00305B;
+  color: white;
+}
+
+#manage_account_table #fourth_col {
+  width: 80px;
+}
+
+#page_content .container-fluid {
+  position: relative;
+}
+
+#page_content .container-fluid > a.btn {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  background-color: #00305B;
+  color: white;
+  border: 0;
+}
+
+#page_content .container-fluid > a.btn:active {
+  box-shadow: inset 0 0 10px 1px #222;
+}
+
+#page_content .row [class*="col-"] {
+  margin-top: 0;
+}
+
+.modal-dialog {
+  font-family: 'Cairo' , sans-serif;
+}
+
+.modal-body {
+  padding: 0;
+
+}
+
+.modal-body .row {
+  padding: 0;
+  margin-top : 20px !important;
+}
+
+.modal-body .row form {
+  padding: 0 20px;
+}
+
+
+.form-group {
+  padding: 0 10px;
+}
+
+#privileges_list ,
+#edit_privileges_list{
+  margin: 0 auto;
+  max-width: 350px;
+  list-style: none;
+  padding: 0;
+  position: relative;
+}
+
+#privileges_list > li > a ,
+#edit_privileges_list > li >a{
+  display: block;
+  padding-left: 1em;
+  height: 2.5em;
+  line-height: 2.5em;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid #d0cdcd;
+  text-decoration: none;
+  color: black;
+  text-align: left;
+}
+
+#privileges_list span.glyphicon ,
+#edit_privileges_list span.glyphicon {
+  position: absolute;
+  right: 1em;
+  top: 1.2em;
+  font-size: .8em;
+  color: #4d4b4b;
+}
+
+#privileges_list li ul ,
+#edit_privileges_list li ul {
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  max-height: 150px;
+  overflow: auto;
+
+}
+
+#privileges_list li ul li ,
+#edit_privileges_list li ul li {
+  height: 2em;
+  line-height: 2em;
+  padding-left: 1em;
+  cursor: pointer;
+}
+
+#privileges_list li ul li:hover ,
+#edit_privileges_list li ul li:hover {
+  background-color: #d6d6d6;
+}
+
+#privileges_field ,
+#edit_privileges_field{
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  opacity: 0;
+  position: absolute;
+}
+
+
+#add_admin_modal .modal-header ,
+#edit_admin_modal .modal-header {
+  background-color: #00305B;
+  color: white;
+}
+
+#add_admin_modal .modal-header button.close ,
+#edit_admin_modal .modal-header button.close {
+  color: white;
+}
+
+#add_admin_modal .modal-body .form-group ,
+#edit_admin_modal .modal-body .form-group {
+  text-align: left;
+}
+
+p.error {
+  text-align: left;
+  display: none;
+}
+
+#add_admin_modal .modal-body [class*="col-"]:last-of-type .form-group{
+  text-align: right;
+}
+
+
+#add_admin_modal .modal-body [class*="col-"]:last-of-type .form-group button[type="submit"] ,
+#edit_admin_modal .modal-body [class*="col-"]:last-of-type .form-group button[type="submit"]
+{
+  background-color: #00305B;
+  color: white;
+  border: 0;
+}
+
+#add_admin_modal .modal-body [class*="col-"]:last-of-type .form-group button[type="submit"]:active ,
+#add_admin_modal .modal-body [class*="col-"]:last-of-type .form-group button[type="submit"]:focus ,
+
+#edit_admin_modal .modal-body [class*="col-"]:last-of-type .form-group button[type="submit"]:active ,
+#edit_admin_modal .modal-body [class*="col-"]:last-of-type .form-group button[type="submit"]:focus
+{
+  outline: 0;
+}
+
+#add_admin_modal .modal-body [class*="col-"]:last-of-type .form-group button[type="submit"]:active ,
+
+#edit_admin_modal .modal-body [class*="col-"]:last-of-type .form-group button[type="submit"]:active
+{
+  box-shadow: inset 0 0 10px 1px #222;
+}
+
+
+#edit_admin_modal fieldset {
+  border: 1px solid #d8d8d8;
+  margin: 10px 0;
+}
+
+#edit_admin_modal fieldset legend {
+  color: #00305B;
+  text-shadow: 0 2px 5px gray;
+}
+
+#edit_admin_modal [class*="col-"]:last-of-type .button_wala_group {
+  text-align: right;
+}
+
+
+
+
+@media(max-width: 767px) {
+
+  #edit_admin_modal .privilege_group {
+    text-align: center !important;
+  }
+
+  #privileges_list ,
+  #edit_privileges_list {
+    max-width: 100%;
+  }
+
+}

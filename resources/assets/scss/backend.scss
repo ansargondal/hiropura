@@ -1,0 +1,323 @@
+
+header {
+  position: relative;
+}
+
+header h4 {
+  margin-top: -15px !important;
+}
+
+header a#message_link {
+  position: absolute;
+  bottom: 5px;
+  right: 70px;
+}
+
+header a#message_link span.fa {
+  font-size: 1.2em;
+  color: #444;
+}
+
+header a#message_link span.badge {
+  position: relative;
+  top: -10px;
+  background-color: #ad0303;
+  border: 0;
+  font-size: .7em;
+}
+
+header a#log_out_link {
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+  font-family: 'Cairo', sans-serif;
+  font-weight: bold;
+  color: #00305B;
+  text-decoration: underline;
+}
+
+main {
+  min-height: 500px;
+}
+
+#main_content.sidebar_activated {
+  min-height: 500px;
+}
+
+#sidebar ul#main_list > li {
+  position: relative;
+  font-weight: bold;
+}
+
+#sidebar ul#main_list > li a:active,
+#sidebar ul#main_list > li a:focus {
+  text-decoration: none;
+}
+
+#sidebar ul#main_list > li.has_sublist:hover a {
+  background-color: #cecccc;
+  color: black;
+}
+
+#sidebar ul li > span.fa {
+  position: absolute;
+  top: 10px;
+  right: 5px;
+  font-weight: bold;
+  color: #00305B;
+}
+
+#sidebar ul li ul {
+  background-color: #cecccc;
+}
+
+#sidebar ul li ul li a {
+  border: 0 !important;
+  text-decoration: none;
+}
+
+#sidebar ul#main_list li ul li:hover a {
+  background-color: #666 !important;
+  color: white !important;
+}
+
+#page_content a section {
+  max-width: 200px;
+  max-height: 200px;
+  /*    min-width: 200px;*/
+  min-height: 200px;
+  background-color: #efeded;
+  border-radius: 6px;
+  position: relative;
+  margin: 0 auto;
+
+  font-family: 'Cairo', sans-serif;
+}
+
+#page_content a section h4 {
+  margin: 0;
+  min-height: 40px;
+  line-height: 40px;
+  background-color: #00305B;
+  color: white;
+  border-radius: 6px 6px 0 0;
+}
+
+#page_content a section h4.pending {
+  background-color: #efb800;
+  color: black;
+}
+
+#page_content a section h4.approved {
+  background-color: green;
+}
+
+#page_content a section h4.rejected {
+  background-color: #c10606;
+}
+
+#page_content a section .group {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+
+  -webkit-transform: translateY(-50%);
+
+  transform: translateY(-50%);
+}
+
+#page_content a section span {
+  font-size: 2.5em;
+  color: #555;
+
+  -webkit-transition: all .5s;
+
+  transition: all .5s;
+}
+
+#page_content a section span.fa {
+  font-size: 1.25em;
+}
+
+#page_content a section:hover span {
+  color: #222;
+}
+
+#login_section {
+  font-family: 'Cairo', sans-serif;
+  padding: 10px 40px;
+  max-width: 400px;
+  min-width: 350px;
+  margin: 0 auto;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: #f4f4f4;
+  border-radius: 8px;
+}
+
+#login_section h2 {
+  text-align: center;
+  font-size: 2em;
+}
+
+#login_section form {
+  padding: 20px 30px;
+}
+
+#login_section form .form-group:last-of-type {
+  text-align: center;
+}
+
+#login_section form button[type="submit"] {
+  background-color: #00305B;
+  color: white;
+  border: 0;
+}
+
+#login_section form button[type="submit"]:active,
+#login_section form button[type="submit"]:focus {
+  outline: 0;
+}
+
+#login_section form button[type="submit"]:active {
+  box-shadow: inset 0 0 10px 2px #222;
+}
+
+@media(max-width: 600px) {
+  #login_section {
+    padding: 0;
+    min-width: 270px;
+    max-width: 320px;
+  }
+
+  #login_section form {
+    padding: 10px 40px;
+  }
+}
+
+#page_content .row {
+  text-align: center;
+}
+
+#page_content .row figure {
+  max-width: 310px;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+#page_content .row figure img {
+  transition: all .5s;
+}
+
+#page_content .row figure h5 {
+  background-color: #333;
+}
+
+#page_content .row {
+  text-align: center;
+}
+
+#page_content .row figure {
+  max-width: 310px;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+#page_content .row figure img {
+  transition: all .5s;
+}
+
+#page_content .row figure h5 {
+  background-color: #333;
+}
+
+#page_content table thead {
+
+  background-image: -webkit-linear-gradient(top, #00274a 0, #00274a 10%, #00305B);
+  background-image: linear-gradient(top, #00274a 0, #00274a 10%, #00305B);
+  color: white;
+}
+
+#edit_modal .modal-dialog .form-group:last-of-type button {
+  background-color: #00305B;
+  color: white;
+}
+
+#page_content .row {
+  text-align: center;
+}
+
+#page_content .row figure {
+  max-width: 310px;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+#page_content .row figure img {
+  transition: all .5s;
+}
+
+#page_content .row figure h5 {
+  background-color: #333;
+}
+
+#page_content table thead {
+
+  background-image: -webkit-linear-gradient(top, #00274a 0, #00274a 10%, #00305B);
+  background-image: linear-gradient(top, #00274a 0, #00274a 10%, #00305B);
+  color: white;
+}
+
+#edit_modal .modal-dialog .form-group:last-of-type button {
+  background-color: #00305B;
+  color: white;
+}
+
+.table #options_col {
+  width: 110px;
+}
+
+.table td:first-of-type a {
+  display: block;
+  color: #222;
+  text-decoration: none;
+}
+
+.table td:first-of-type a:active,
+.table td:first-of-type a:focus {
+  outline: 0;
+}
+
+.table td.unread,
+.table td.unread ~ td {
+  box-shadow: inset 0 0 10px 0px #f74747 !important;
+}
+
+#message_modal .modal-header {
+  background-color: #00305B;
+  color: white;
+}
+
+#message_modal .modal-header button.close {
+  color: white;
+
+}
+
+#message_modal .button_container {
+  text-align: right;
+}
+
+#message_modal .button_container a.btn {
+  background-color: #00305B;
+  color: white;
+  border: 0;
+  padding: 5px 15px;
+}
+
+@import "partials/global";
+@import "partials/categories";
+@import "partials/backend/manage-accounts";
+@import "partials/backend/pending-post";
