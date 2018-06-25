@@ -1,6 +1,5 @@
 @extends('layout.frontend.app')
 @section('title', 'Categories | Hiropura')
-
 @section('content')
     <main id="main_content" class="container-fluid">
 
@@ -13,7 +12,6 @@
                     <button id="toggle_sidebar" class="btn btn-default">
                         <span class="fa fa-bars"></span>
                     </button>
-
                     <a href="{{route('frontend.index')}}" id="back_link"><span class="fa fa-arrow-left"> Back</span></a>
                 </div>
                 <div class="container-fluid">

@@ -473,36 +473,31 @@
         ================================================-->
 
         <section id="contact_us">
-
             <div class="container">
                 <div class="blur"></div>
-
                 <h3>Contact Us</h3>
-
-
-                <form action="" class="form-horizontal">
-
-
+                @isset($message)
+                    <h1>{{$message}}</h1>
+                @endif
+                <form action="{{route('messages.store')}}" method="post" class="form-horizontal" id="form-send-message">
+                    @csrf
                     <div class="form-group">
                         <label for="">Name</label>
-                        <input type="text" class="form-control" placeholder="Enter your name here">
+                        <input type="text" class="form-control" placeholder="Enter your name here" name="name">
                     </div>
 
                     <div class="form-group">
                         <label for="">Email</label>
-                        <input type="email" class="form-control" placeholder="email@email.com">
+                        <input type="email" class="form-control" placeholder="email@email.com" name="email">
                     </div>
 
                     <div class="form-group">
                         <label for="">Message</label>
-                        <textarea name="message"  class="form-control" placeholder="Your Message Here"></textarea>
+                        <textarea name="message" class="form-control" placeholder="Your Message Here"></textarea>
                     </div>
-
-
                     <div class="form-group">
-                        <button type="submit" class="btn btn-default">Send</button>
+                        <button type="submit" id="btn-submit" class="btn btn-default">SEND</button>
                     </div>
-
                 </form>
             </div>
             <div id="login_link_target"></div>
@@ -647,7 +642,7 @@
         </div>
     </main>
 @stop
-     
-     
-     
+
+
+
 

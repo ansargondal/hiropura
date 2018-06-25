@@ -15,3 +15,6 @@ Route::get('/categories', function () {
 Route::get('/post', function () {
     return view('frontend.full-post');
 })->name('frontend.post');
+
+
+Route::resource('messages', 'MessageController');
