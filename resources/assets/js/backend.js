@@ -1,5 +1,6 @@
 $('#toggle_sidebar').click(function () {
 
+
     $('#main_content').toggleClass('sidebar_activated');
 
 
@@ -37,3 +38,4 @@ $('#toggle_sidebar').click(function () {
         }
     });
 });
+

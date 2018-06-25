@@ -37,11 +37,12 @@ Route::get('/admin/login', function () {
 })->name('admin.login');
 
 
-Route::get('/admin/messages', function () {
-    return view('admin.messages');
-})->name('admin.messages');
-
-
 Route::get('/admin/manage-accounts', function () {
     return view('admin.manage-accounts');
 })->name('admin.manage-accounts');
+
+Route::group(['prefix' => 'admin'], function () {
+
+    Route::resource('messages', 'MessageController');
+});
+

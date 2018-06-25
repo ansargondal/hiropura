@@ -5,7 +5,6 @@
         <div class="row">
 
             @include('layout.admin.partials.sidebar')
-
             <div id="add_categories_modal" class="modal fade">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -86,125 +85,42 @@
 
                         <div class="table-responsive">
                             <table class="table">
-
                                 <colgroup>
                                     <col id="message_col">
                                     <col id="options_col">
                                 </colgroup>
-
                                 <thead>
                                 <tr>
                                     <th>Messages</th>
-                                    <th>Options</th>
+                                    <th>Actions</th>
                                 </tr>
                                 </thead>
-
-                                <tbody>
-                                <tr>
-                                    <td class="unread">
-                                        <a href="#message_modal" data-toggle="modal">Lorem ipsum dolar sit amet
-                                            consectetur
-                                            adipisicing elit lorem ipsum dolar sit amet....</a></td>
-                                    <td>
-                                        <a href="" class="btn btn-default" title="Mark As Read">
+                                <tbody class="table-messages-body">
+                                @foreach($messages as $message)
+                                    <tr>
+                                        <td class="{{$message->state}}">
+                                            <a href="#message_modal" data-toggle="modal">
+                                                {{$message->body}}
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a href="" class="btn btn-default" title="Mark As Read">
                                                     <span class="fa fa-check-circle">
                                                     </span>
-                                        </a>
-                                        <a href="" class="btn btn-default" title="Delete Message">
-                                            <span class="fa fa-trash"></span>
-                                        </a>
+                                            </a>
+                                            <a href="" class="btn btn-default" title="Delete Message">
+                                                <span class="fa fa-trash"></span>
+                                            </a>
 
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td class="unread">
-                                        <a href="#message_modal" data-toggle="modal">Lorem ipsum dolar sit amet
-                                            consectetur
-                                            adipisicing elit lorem ipsum dolar sit amet....</a></td>
-                                    <td>
-                                        <a href="" class="btn btn-default" title="Mark As Read">
-                                                    <span class="fa fa-check-circle">
-                                                    </span>
-                                        </a>
-                                        <a href="" class="btn btn-default" title="Delete Message">
-                                            <span class="fa fa-trash"></span>
-                                        </a>
-
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td><a href="#message_modal" data-toggle="modal">Lorem ipsum dolar sit amet
-                                            consectetur
-                                            adipisicing elit lorem ipsum dolar sit amet....</a></td>
-                                    <td>
-                                        <a href="" class="btn btn-default" title="Mark As Read">
-                                                    <span class="fa fa-check-circle">
-                                                    </span>
-                                        </a>
-                                        <a href="" class="btn btn-default" title="Delete Message">
-                                            <span class="fa fa-trash"></span>
-                                        </a>
-
-                                    </td>
-                                </tr>
-
-
-                                <tr>
-                                    <td><a href="#message_modal" data-toggle="modal">Lorem ipsum dolar sit amet
-                                            consectetur
-                                            adipisicing elit lorem ipsum dolar sit amet....</a></td>
-                                    <td>
-                                        <a href="" class="btn btn-default" title="Mark As Read">
-                                                    <span class="fa fa-check-circle">
-                                                    </span>
-                                        </a>
-                                        <a href="" class="btn btn-default" title="Delete Message">
-                                            <span class="fa fa-trash"></span>
-                                        </a>
-
-                                    </td>
-                                </tr>
-
-
-                                <tr>
-                                    <td><a href="#message_modal" data-toggle="modal">Lorem ipsum dolar sit amet
-                                            consectetur
-                                            adipisicing elit lorem ipsum dolar sit amet....</a></td>
-                                    <td>
-                                        <a href="" class="btn btn-default" title="Mark As Read">
-                                                    <span class="fa fa-check-circle">
-                                                    </span>
-                                        </a>
-                                        <a href="" class="btn btn-default" title="Delete Message">
-                                            <span class="fa fa-trash"></span>
-                                        </a>
-
-                                    </td>
-                                </tr>
-
-
+                                        </td>
+                                    </tr>
+                                @endforeach
                                 </tbody>
-
                             </table>
                         </div>
-
                     </div> <!--row ends here-->
-
                 </div>
-
-                <ol class="pagination">
-                    <li><a href="#">&laquo;</a></li>
-                    <li class="active"><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">5</a></li>
-                    <li><a href="#">&raquo;</a></li>
-                </ol>
-
-
+                {{$messages->links()}}
                 <div class="modal fade" id="message_modal">
                     <div class="modal-dialog">
                         <div class="modal-content">
@@ -222,12 +138,10 @@
                                     <a href="#" class="btn btn-default" data-dismiss="modal"><span
                                                 class="fa fa-check"></span></a>
                                 </div>
-
                             </div>
                         </div>
                     </div>
                 </div>
-
             </section>
         </div>
     </main>

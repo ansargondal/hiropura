@@ -27,7 +27,10 @@ class MessageController extends Controller
      */
     public function index()
     {
-        //
+        $messages = $this->messages
+            ->latest()->paginate(10);
+
+        return view('admin.messages', compact('messages'));
     }
 
     /**

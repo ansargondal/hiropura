@@ -493,7 +493,7 @@
 
                     <div class="form-group">
                         <label for="">Message</label>
-                        <textarea name="message" class="form-control" placeholder="Your Message Here"></textarea>
+                        <textarea name="body" class="form-control" placeholder="Your Message Here"></textarea>
                     </div>
                     <div class="form-group">
                         <button type="submit" id="btn-submit" class="btn btn-default">SEND</button>

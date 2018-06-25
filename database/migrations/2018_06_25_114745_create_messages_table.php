@@ -18,7 +18,9 @@ class CreateMessagesTable extends Migration
             $table->integer('user_id')->unsigned()->index();
             $table->string('name')->nullable();
             $table->string('email');
-            $table->text('message');
+            $table->text('body');
+
+            $table->boolean('status')->default(false);
 
             $table->timestamps();
 

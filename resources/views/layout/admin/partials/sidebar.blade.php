@@ -28,6 +28,6 @@
             </ul>
         </li>
         <li><a href="{{route('admin.manage-accounts')}}">Manage Accounts</a></li>
-        <li><a href="{{route('admin.messages')}}">Messages</a></li>
+        <li><a href="{{route('messages.index')}}">Messages</a></li>
     </ul>
 </section>

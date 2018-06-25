@@ -17,4 +17,3 @@ Route::get('/post', function () {
 })->name('frontend.post');
 
 
-Route::resource('messages', 'MessageController');
