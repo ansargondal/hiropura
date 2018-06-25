@@ -10,7 +10,7 @@
         <div class="navbar-header">
 
 
-            <a href="index.html" class="navbar-brand" title="Hiropura logo"><img src="../images/logo_english.png"
+            <a href="{{route('admin')}}" class="navbar-brand" title="Hiropura logo"><img src="{{asset('images/logo_english.png')}}"
                                                                                  class="img-responsive"
                                                                                  alt="hiropura logo"></a>
         </div>

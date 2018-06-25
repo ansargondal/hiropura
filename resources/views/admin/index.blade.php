@@ -56,7 +56,7 @@
                     <div class="row">
                         <div class="col-xs-12 col-sm-6 col-md-3">
 
-                            <a href="pending_posts.html">
+                            <a href="{{route('admin.posts.pending')}}">
                                 <section>
                                     <h4 class="pending">Pending Posts</h4>
                                     <div class="group">
@@ -71,7 +71,7 @@
 
                         <div class="col-xs-12 col-sm-6 col-md-3">
 
-                            <a href="approved_post.html">
+                            <a href="{{route('admin.posts.approved')}}">
                                 <section>
                                     <h4 class="approved">Approved Post</h4>
                                     <div class="group">
@@ -86,7 +86,7 @@
 
                         <div class="col-xs-12 col-sm-6 col-md-3">
 
-                            <a href="rejected_post.html">
+                            <a href="{{route('admin.posts.rejected')}}">
                                 <section>
                                     <h4 class="rejected">Rejected Posts</h4>
                                     <div class="group">
@@ -101,7 +101,7 @@
 
                         <div class="col-xs-12 col-sm-6 col-md-3">
 
-                            <a href="view_all.html">
+                            <a href="{{route('admin.posts')}}">
                                 <section>
                                     <h4>All Posts</h4>
                                     <div class="group">

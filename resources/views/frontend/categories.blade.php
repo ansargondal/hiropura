@@ -14,58 +14,18 @@
                         <span class="fa fa-bars"></span>
                     </button>
 
-                    <a href="index.html" id="back_link"><span class="fa fa-arrow-left"> Back</span></a>
-
+                    <a href="{{route('frontend.index')}}" id="back_link"><span class="fa fa-arrow-left"> Back</span></a>
                 </div>
-
-
                 <div class="container-fluid">
-
                     <div class="row">
-
                         <figure>
-                            <a href="full_post.html">
-                                <h5>Okonomiyaki Nagata with some long text</h5>
-                                <div class="img_container">
-                                    <img src="posts/okonomiyaki_nagata/outdoor_light_view.jpg" class="img-responsive"
-                                         alt="police or fire station image">
-
-                                    <a href="#edit_modal" data-toggle="modal" class="btn btn-default"><span
-                                                class="fa fa-edit"></span></a>
-
-                                </div>
-                                <figcaption>here's description of the specific post which describes what post is about
-                                </figcaption>
-                            </a>
-                        </figure>
-
-                        <figure>
-                            <a href="full_post.html">
+                            <a href="{{route('frontend.post')}}">
                                 <h5>Okonomiyaki Nagata</h5>
                                 <div class="img_container">
                                     <img src="posts/okonomiyaki_nagata/outdoor_light_view.jpg" class="img-responsive"
                                          alt="police or fire station image">
-
                                     <a href="#edit_modal" data-toggle="modal" class="btn btn-default"><span
                                                 class="fa fa-edit"></span></a>
-
-                                </div>
-                                <figcaption>here's description of the specific post which describes what post is about
-                                </figcaption>
-                            </a>
-                        </figure>
-
-
-                        <figure>
-                            <a href="full_post.html">
-                                <h5>Okonomiyaki Nagata</h5>
-                                <div class="img_container">
-                                    <img src="posts/okonomiyaki_nagata/outdoor_light_view.jpg" class="img-responsive"
-                                         alt="police or fire station image">
-
-                                    <a href="#edit_modal" data-toggle="modal" class="btn btn-default"><span
-                                                class="fa fa-edit"></span></a>
-
                                 </div>
                                 <figcaption>here's description of the specific post which describes what post is about
                                 </figcaption>
@@ -178,7 +138,6 @@
                         </div>
                     </div>
                 </div>
-
             </section>
         </div>
     </main>

@@ -18,7 +18,8 @@
                         <span class="fa fa-bars"></span>
                     </button>
 
-                    <a href="categories.blade.php" id="back_link"><span class="fa fa-arrow-left"> Back</span></a>
+                    <a href="{{route('frontend.categories')}}" id="back_link"><span
+                                class="fa fa-arrow-left"> Back</span></a>
 
                 </div>
 

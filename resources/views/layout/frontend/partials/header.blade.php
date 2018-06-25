@@ -7,9 +7,10 @@
 
     <link rel="icon" href="{{asset('images/favicon-32x32.png')}}" type="image/x-icon">
 
-    <link rel="stylesheet" href="{{ asset('vendor/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{ asset('vendor/animate.min.css')}}">
-    <link rel="stylesheet" href="{{ asset('vendor/font-awesome.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('vendor/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('vendor/css/animate.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('vendor/css/font-awesome.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('vendor/css/bootstrap-tagsinput.css')}}">
     <link rel="stylesheet" href="{{ asset('css/frontend.min.css')}}">
     @section('css')
     @stop
