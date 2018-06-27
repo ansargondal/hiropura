@@ -396,56 +396,48 @@
 
         <!--rules of service section starts here
         ================================================-->
-
         <section id="rules_of_service">
             <header>
-                <h2 class="container wow zoomIn">RULES OF THIS SERVICE</h2>
+                <h2 class="container wow zoomIn text-uppercase">@lang('rules of this service')</h2>
             </header>
 
             <div class="container">
                 <article class="carousel slide wow fadeIn" id="my_carousel">
                     <div class="carousel-inner">
                         <div class="item active">
-                            <h4>1 OF 7</h4>
-                            <p>Global Access Japan Co.,Ltd reserve the right to decline your Ad, if it contains material
-                                which we don't see suitable for this site. In this case, your Ad will not be made live,
-                                and you may not be notified.</p>
+                            <h4>1 @lang('of') 7</h4>
+                            <p>@lang('home/rules.rule1')</p>
                         </div>
                         <div class="item">
-                            <h4>2 OF 7</h4>
-                            <p>The following are regrettably unable to use this service: Language Schools, Translation
-                                Services, Web Creation Companies</p>
+                            <h4>2 @lang('of') 7</h4>
+                            <p>@lang('home/rules.rule2')</p>
                         </div>
                         <div class="item">
-                            <h4>3 OF 7</h4>
-                            <p>Nudist photos / images, not permitted.</p>
+                            <h4>3 @lang('of') 7</h4>
+                            <p>@lang('home/rules.rule3')</p>
                         </div>
                         <div class="item">
-                            <h4>4 OF 7</h4>
-                            <p>Any Ads not related to your business etc .. not permitted. Such as conflicts with other
-                                people, businesses etc</p>
+                            <h4>4 @lang('of') 7</h4>
+                            <p>@lang('home/rules.rule4')</p>
                         </div>
                         <div class="item">
-                            <h4>5 OF 7</h4>
-                            <p>Posting Ads on places which don't exist, or are illegally ran, are not permitted.</p>
+                            <h4>5 @lang('of') 7</h4>
+                            <p>@lang('home/rules.rule5')</p>
                         </div>
                         <div class="item">
-                            <h4>6 OF 7</h4>
-                            <p>You may post a legitimate Ad on a Business etc .. you are not related to only if the
-                                content, is supportive of that Business etc .. however that Business etc .. have the
-                                right to remove it at any time, and your account will be deleted.</p>
+                            <h4>6 @lang('of') 7</h4>
+                            <p>@lang('home/rules.rule6')</p>
                         </div>
                         <div class="item">
-                            <h4>7 OF 7</h4>
-                            <p>E-Mails, Post, Faxes or Phone Calls, on this service will not be replied if made directly
-                                to our main business Global Access Japan Co.,Ltd, and or unless classed as and
-                                emergency.</p>
+                            <h4>7 @lang('of') 7</h4>
+                            <p>@lang('home/rules.rule7')</p>
                         </div>
                     </div>
-
                     <div id="contact_us_target"></div>
-
-                    <button data-target="#my_carousel" class="btn btn-default" data-slide="next"> Got It</button>
+                    <button data-target="#my_carousel" style="width: 130px;" class="btn  text-capitalize"
+                            data-slide="next">
+                        @lang('got it')
+                    </button>
                 </article>
 
 
