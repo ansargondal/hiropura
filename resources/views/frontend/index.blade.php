@@ -11,26 +11,29 @@
 
         <section id="intro_section">
             <div class="container">
-                <h1 class="wow zoomIn"><a href="#find_place_target">FIND PLACE</a> <span>.</span> <a
-                            href="#create_ad_modal" data-toggle="modal">CREATE AD</a></h1>
-                <h2 class="wow zoomIn">FIND or ADVERTISE</h2>
-                <h4 class="wow zoomIn">A BAR . RESTAURANT . COMPANY . GROUP . OTHERS ...</h4>
-
-                <h4 class="wow zoomIn">IN HIROSHIMA</h4>
-                <h4 class="no_underline wow zoomIn">RIGHT HERE !</h4>
-                <h4 class="wow zoomIn">TOTALLY FREE SERVICE</h4>
+                <h1 class="wow zoomIn text-uppercase"><a href="#find_place_target">@lang('home/header.find_place')</a>
+                    <span>.</span> <a
+                            href="#create_ad_modal" data-toggle="modal"></a></h1>
+                <h2 class="wow zoomIn text-uppercase">@lang('home/header.find_or_advertise')</h2>
+                <h4 class="wow zoomIn text-uppercase">
+                    @lang('home/header.a_bar') .
+                    @lang('home/header.restaurant') .
+                    @lang('home/header.company') .
+                    @lang('home/header.group') .
+                    @lang('home/header.others')...</h4>
+                <h4 class="wow zoomIn text-uppercase">@lang('home/header.in_hiroshima')</h4>
+                <h4 class="no_underline wow zoomIn text-uppercase">@lang('home/header.right_here') !</h4>
+                <h4 class="wow zoomIn text-uppercase">@lang('home/header.totally_free_service')</h4>
 
                 <div class="row">
                     <div class="col-sm-6 col-xs-12">
-                        <h3 class="wow zoomIn">CATEGORIES</h3>
+                        <h3 class="wow zoomIn text-uppercase">@lang('home/header.categories')</h3>
 
                         <form action="">
-
                             <ul id="categories_list" class="wow zoomIn">
                                 <li class="dropdown"><a href="#" id="form_categories_list" class="dropdown-toggle"
                                                         data-toggle="dropdown"><span
                                                 class="glyphicon glyphicon-arrow-down"></span> </a>
-
                                     <ul class="dropdown-menu">
                                         <li>Bars</li>
                                         <li>Restaurants</li>
@@ -46,53 +49,38 @@
                             <!--hidden field-->
                             <input type="text" id="categories_field">
                             <!--hidden field-->
-
-
                         </form>
-
                     </div>
-
-
                     <div class="col-sm-6 col-xs-12">
                         <section id="find_place">
-                            <h3 class="wow zoomIn">Find Place</h3>
-
+                            <h3 class="wow zoomIn text-capitalize">@lang('home/header.find_place')</h3>
                             <form action="" class="form-horizontal wow zoomIn">
                                 <div class="form-group">
-                                    <input type="search" class="form-control" placeholder="Search By Name Or Tags">
+                                    <input type="search" class="form-control"
+                                           placeholder="@lang('home/header.search_by_name_or_tags')">h
                                     <button type="submit" class="btn btn-default glyphicon glyphicon-search"></button>
                                 </div>
                             </form>
-
                             <div id="how_to_use_target"></div>
-
                         </section>
                     </div>
-
                 </div>
-
-
                 <div id="about_us_target"></div>
-
             </div>
         </section>
 
         <!--intro section with buildings ends here
         ================================================-->
-
-
         <!--about us section starts here
         ================================================-->
-
-
         <section id="about_us" class="container">
             <h2>Welcome To Hiropura</h2>
-
 
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12 col-sm-8">
-                        <p>My name is <strong>Alan Anthony Kavanagh</strong>, originally from Dublin-Ireland, I`m now
+                        <p>
+                            My name is <strong>Alan Anthony Kavanagh</strong>, originally from Dublin-Ireland, I`m now
                             the President &amp; CEO at <strong>Global Access Japan Co.Ltd</strong> , located in the
                             Ujina-Kanda area,of the beautiful City of Hiroshima, Japan.
                             <br>
