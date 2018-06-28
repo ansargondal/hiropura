@@ -28,7 +28,6 @@
                 <div class="row">
                     <div class="col-sm-6 col-xs-12">
                         <h3 class="wow zoomIn text-uppercase">@lang('home/header.categories')</h3>
-
                         <form action="">
                             <ul id="categories_list" class="wow zoomIn">
                                 <li class="dropdown"><a href="#" id="form_categories_list" class="dropdown-toggle"
@@ -45,7 +44,6 @@
                                     </ul>
                                 </li>
                             </ul>
-
                             <!--hidden field-->
                             <input type="text" id="categories_field">
                             <!--hidden field-->
@@ -343,7 +341,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="modal fade" id="update_ad_modal">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -366,8 +363,6 @@
                     </div>
                 </div>
             </div>
-
-
             <div class="modal fade" id="delete_ad_modal">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -388,7 +383,6 @@
                     </div>
                 </div>
             </div>
-
         </section>
 
         <!--how to use this service section ends here
@@ -398,45 +392,44 @@
         ================================================-->
         <section id="rules_of_service">
             <header>
-                <h2 class="container wow zoomIn text-uppercase">@lang('rules of this service')</h2>
+                <h2 class="container wow zoomIn text-uppercase">@lang('home/rules.rules_of_this_service')</h2>
             </header>
-
             <div class="container">
                 <article class="carousel slide wow fadeIn" id="my_carousel">
                     <div class="carousel-inner">
                         <div class="item active">
-                            <h4>1 @lang('of') 7</h4>
+                            <h4>1 @lang('home/rules.of') 7</h4>
                             <p>@lang('home/rules.rule1')</p>
                         </div>
                         <div class="item">
-                            <h4>2 @lang('of') 7</h4>
+                            <h4>2 @lang('home/rules.of') 7</h4>
                             <p>@lang('home/rules.rule2')</p>
                         </div>
                         <div class="item">
-                            <h4>3 @lang('of') 7</h4>
+                            <h4>3 @lang('home/rules.of') 7</h4>
                             <p>@lang('home/rules.rule3')</p>
                         </div>
                         <div class="item">
-                            <h4>4 @lang('of') 7</h4>
+                            <h4>4 @lang('home/rules.of') 7</h4>
                             <p>@lang('home/rules.rule4')</p>
                         </div>
                         <div class="item">
-                            <h4>5 @lang('of') 7</h4>
+                            <h4>5 @lang('home/rules.of') 7</h4>
                             <p>@lang('home/rules.rule5')</p>
                         </div>
                         <div class="item">
-                            <h4>6 @lang('of') 7</h4>
+                            <h4>6 @lang('home/rules.of') 7</h4>
                             <p>@lang('home/rules.rule6')</p>
                         </div>
                         <div class="item">
-                            <h4>7 @lang('of') 7</h4>
+                            <h4>7 @lang('home/rules.of') 7</h4>
                             <p>@lang('home/rules.rule7')</p>
                         </div>
                     </div>
                     <div id="contact_us_target"></div>
                     <button data-target="#my_carousel" style="width: 130px;" class="btn  text-capitalize"
                             data-slide="next">
-                        @lang('got it')
+                        @lang('home/rules.got_it')
                     </button>
                 </article>
 

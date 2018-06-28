@@ -1,7 +1,10 @@
 <?php
 
 return [
-    'rule1' => 'Global Access Japan Co.,Ltd reserve the right to decline your Ad, if it contains material which we don\'t see suitable for this site. In this case, your Ad will not be made live, and you may not be notified.',
+    'of' => 'of',
+    'got_it' => 'got it',
+    'rules_of_this_service' => 'rules of this service',
+    'rule1' => 'Global Access Japan Co .,Ltd reserve the right to decline your Ad, if it contains material which we don\'t see suitable for this site. In this case, your Ad will not be made live, and you may not be notified.',
 
     'rule2' => 'The following are regrettably unable to use this service: Language Schools, Translation Services, Web Creation Companies',
 
