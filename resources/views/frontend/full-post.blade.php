@@ -13,17 +13,14 @@
 
             <section class="xs-12" id="page_content">
                 <div class="button_container">
-                    <h2>Post Selected</h2>
+                    <h2 class="text-capitalize">@lang('posts/post.post_selected')</h2>
                     <button id="toggle_sidebar" class="btn btn-default">
                         <span class="fa fa-bars"></span>
                     </button>
 
                     <a href="{{route('frontend.categories')}}" id="back_link"><span
-                                class="fa fa-arrow-left"> Back</span></a>
-
+                                class="fa fa-arrow-left text-capitalize">@lang('categories/categories.back')</span></a>
                 </div>
-
-
                 <div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
                     <div class="slides"></div>
                     <h3 class="title"></h3>
@@ -56,12 +53,11 @@
 
                         <thead>
                         <tr>
-                            <th>Name</th>
-                            <th>Contact</th>
-                            <th>Location</th>
+                            <th class="text-capitalize">@lang('home/contact.name')</th>
+                            <th>@lang('home/navigation.contact')</th>
+                            <th>@lang('posts/post.location')</th>
                         </tr>
                         </thead>
-
                         <tbody>
                         <tr>
                             <td>Okonomiyaki NAGATA-YA</td>
@@ -70,7 +66,7 @@
                         </tr>
 
                         <tr>
-                            <th colspan="2">Email</th>
+                            <th colspan="2" class="text-capitalize">@lang('home/contact.email')</th>
                             <th>URL</th>
                         </tr>
 
@@ -80,8 +76,8 @@
                         </tr>
 
                         <tr>
-                            <td colspan="3" id="heading">
-                                Description
+                            <td colspan="3" id="heading" class="text-capitalize">
+                                @lang('posts/post.description')
                             </td>
                         </tr>
 

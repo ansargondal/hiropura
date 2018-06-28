@@ -8,11 +8,11 @@
 
             <section class="xs-12" id="page_content">
                 <div class="button_container">
-                    <h2>Category Selected</h2>
+                    <h2 class="text-capitalize">@lang('categories/categories.category_selected')</h2>
                     <button id="toggle_sidebar" class="btn btn-default">
                         <span class="fa fa-bars"></span>
                     </button>
-                    <a href="{{route('frontend.index')}}" id="back_link"><span class="fa fa-arrow-left"> Back</span></a>
+                    <a href="{{route('frontend.index')}}" id="back_link"><span class="fa fa-arrow-left text-capitalize"> @lang('categories/categories.back')</span></a>
                 </div>
                 <div class="container-fluid">
                     <div class="row">
@@ -84,7 +84,8 @@
 
                                     <div class="form-group">
 
-                                        <label for="">Choose Category</label>
+                                        <label for=""
+                                               class="text-capitalizek">@lang('categories/categories.choose_category')</label>
 
                                         <ul id="post_categories_list">
                                             <li class="dropdown"><a href="#" id="post_form_categories_list"
