@@ -29,7 +29,7 @@
                 <span class="icon-bar"></span>
             </button>
             <a href="{{route('frontend.index')}}" class="navbar-brand" title="Hiropura logo"><img
-                        src="images/logo_english.png"
+                        src="{{asset('images/') . '/'. app()->getLocale() . '.png'}}"
                         class="img-responsive"
                         alt="hiropura logo"></a>
         </div>

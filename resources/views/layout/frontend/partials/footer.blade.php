@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
 
-            <h4 class="wow fadeIn">Stay Connected With Hiropura Socially !</h4>
+            <h4 class="wow fadeIn text-capitalize">@lang('home/footer.stay_connected_socially')</h4>
 
             <a href="#" title="Go to top"><span class="fa fa-arrow-circle-o-up"></span></a>
 

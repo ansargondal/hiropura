@@ -72,61 +72,41 @@
         <!--about us section starts here
         ================================================-->
         <section id="about_us" class="container">
-            <h2>Welcome To Hiropura</h2>
+            <h2 class="text-capitalize">@lang('home/about.welcome')</h2>
 
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12 col-sm-8">
-                        <p>
-                            My name is <strong>Alan Anthony Kavanagh</strong>, originally from Dublin-Ireland, I`m now
-                            the President &amp; CEO at <strong>Global Access Japan Co.Ltd</strong> , located in the
-                            Ujina-Kanda area,of the beautiful City of Hiroshima, Japan.
-                            <br>
-                            <b>Hiropura</b> was created and supplied to you as a way of giving back to the City in which
-                            GAJ was founded, to support our neighbouring businesses, organisations and to built a
-                            lasting relationship for a bright future. </p>
+                        @lang('home/about.about_alan')
                     </div>
                     <div class="col-xs-12 col-sm-4">
                         <img src="images/gaj_logo.png" class="img-responsive" alt="global access japan logo">
                     </div>
                 </div>
-
                 <div class="row">
                     <div class="col-xs-12 col-sm-8">
-                        <p><b>Hiropura</b> is a totally free service.If your Business or Organisation is located in the
-                            (Kita-Ku, Minami-Ku, Nishi-Ku and or, the Higashi-Ku) areas of Hiroshima-Shi, you qualify to
-                            use this service.</p>
+                        @lang('home/about.about_hiropura')
                     </div>
                     <div class="col-xs-12 col-sm-4">
-                        <img src="images/logo_english.png" class="img-responsive" alt="hiropura english logo">
+                        <img src="{{asset('images/').'/' .app()->getLocale() . '.png'}}" class="img-responsive"
+                             alt="hiropura english logo">
                     </div>
                 </div>
-
                 <div id="find_place_target"></div>
-
                 <div class="row">
                     <div class="col-xs-12 col-sm-8">
-                        <p>Check us out at <a href="http://www.globalaccessjapan.com">www.globalaccessjapan.com</a>
-                            <br>
-                            Warmest Regards,
-                            <br>
-                            Alan A Kavanagh.</p>
+                        @lang('home/about.contact_details')
                     </div>
                     <div class="col-xs-12 col-sm-4">
-                        <img src="images/logo_japanese.png" class="img-responsive" alt="hiropura japanese logo">
                     </div>
                 </div>
             </div>
-
         </section>
-
         <!--about us section ends here
         ================================================-->
 
-
         <!--find place section starts here
         ================================================-->
-
 
         <!--find place section ends here
         ================================================-->
@@ -299,13 +279,16 @@
         <section id="how_to_use" class="container-fluid">
             <div class="row">
                 <div class="col-xs-12 col-sm-5" id="use_service">
-                    <h2 class="wow fadeIn">How To Use This Service</h2>
+                    <h2 class="wow fadeIn text-capitalize">@lang('home/service_rules.how_to_use_this_service')</h2>
                 </div>
                 <div class="col-xs-a12 col-sm-7" id="service_rules">
                     <ul class="service_rules wow fadeIn">
-                        <li><a href="#post_ad_modal" data-toggle="modal">Post Ad</a></li>
-                        <li><a href="#update_ad_modal" data-toggle="modal">Update Ad</a></li>
-                        <li><a href="#delete_ad_modal" data-toggle="modal">Delete Ad</a></li>
+                        <li><a href="#post_ad_modal" class="text-capitalize"
+                               data-toggle="modal">@lang('home/service_rules.post_ad')</a></li>
+                        <li><a href="#update_ad_modal" class="text-capitalize"
+                               data-toggle="modal">@lang('home/service_rules.update_ad')</a></li>
+                        <li><a href="#delete_ad_modal" class="text-capitalize"
+                               data-toggle="modal">@lang('home/service_rules.delete_ad')</a></li>
                     </ul>
                 </div>
 
@@ -448,28 +431,30 @@
         <section id="contact_us">
             <div class="container">
                 <div class="blur"></div>
-                <h3>Contact Us</h3>
+                <h3 class="text-uppercase">@lang('home/contact.contact_us')</h3>
                 @isset($message)
                     <h1>{{$message}}</h1>
                 @endif
                 <form action="{{route('messages.store')}}" method="post" class="form-horizontal" id="form-send-message">
                     @csrf
                     <div class="form-group">
-                        <label for="">Name</label>
-                        <input type="text" class="form-control" placeholder="Enter your name here" name="name">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="">Email</label>
-                        <input type="email" class="form-control" placeholder="email@email.com" name="email">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="">Message</label>
-                        <textarea name="body" class="form-control" placeholder="Your Message Here"></textarea>
+                        <label for="" class="text-capitalize">@lang('home/contact.name')</label>
+                        <input type="text" class="form-control" placeholder="@lang('home/contact.your_name')"
+                               name="name">
                     </div>
                     <div class="form-group">
-                        <button type="submit" id="btn-submit" class="btn btn-default">SEND</button>
+                        <label for="" class="text-capitalize">@lang('home/contact.email')</label>
+                        <input type="email" class="form-control" placeholder="@lang('home/contact.your_email')"
+                               name="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="" class="text-capitalize">@lang('home/contact.message')</label>
+                        <textarea name="body" class="form-control"
+                                  placeholder="@lang('home/contact.your_message')"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" id="btn-submit"
+                                class="btn btn-default text-uppercase">@lang('home/contact.send')</button>
                     </div>
                 </form>
             </div>
@@ -485,53 +470,55 @@
 
         <section id="account_section">
             <div class="container">
-                <h2>REGISTER <span>|</span> LOGIN</h2>
+                <h2 class="text-uppercase">@lang('home/navigation.register')
+                    <span>|</span> @lang('home/navigation.login')</h2>
                 <div class="row">
                     <div class="col-xs-12 col-sm-5">
-                        <h3>REGISTER NEW ACCOUNT</h3>
-
+                        <h3 class="text-uppercase">@lang('home/register.login_to_account')</h3>
 
                         <form action="" id="sign_up_form" class="form-horizontal wow slideInLeft">
                             <div class="form-group">
-                                <label for="">Name</label>
-                                <input type="text" class="form-control" placeholder="Enter Your Name Here">
+                                <label for="" class="text-capitalize">@lang('home/contact.name')</label>
+                                <input type="text" class="form-control" placeholder="@lang('home/contact.your_name')">
                             </div>
 
                             <div class="form-group">
-                                <label for="">Email</label>
-                                <input type="email" class="form-control" placeholder="Enter Your Email Here">
+                                <label for="" class="text-capitalize">@lang('home/contact.your_email')</label>
+                                <input type="email" class="form-control" placeholder="@lang('home/contact.your_email')">
                             </div>
 
                             <div class="form-group">
-                                <label for="">Password</label>
+                                <label for="" class="text-capitalize">@lang('home/register.password')</label>
                                 <input type="password" id="password" class="form-control"
-                                       placeholder="Set Strong Password With Alpha-Numeric Combination">
+                                       placeholder="@lang('home/register.your_password')">
                             </div>
 
                             <div class="form-group">
-                                <label for="">Confirm Password</label>
+                                <label for="" class="text-capitalize">@lang('home/register.confirm_password')</label>
                                 <input type="password" id="confirm_password" class="form-control"
-                                       placeholder="Re-Enter Your Password">
+                                       placeholder="@lang('home/register.your_confirm_password')">
                             </div>
 
                             <div class="form-group">
-                                <label for="">Address</label>
-                                <input type="text" class="form-control" placeholder="Enter Your Address Here">
+                                <label for="" class="text-capitalize">@lang('home/register.address')</label>
+                                <input type="text" class="form-control"
+                                       placeholder="@lang('home/register.your_address')">
                             </div>
 
                             <div class="form-group">
-                                <label for="">City</label>
-                                <input type="text" class="form-control" placeholder="Enter Your City">
+                                <label for="" class="text-capitalize">@lang('home/register.city')</label>
+                                <input type="text" class="form-control" placeholder="@lang('home/register.your_city')">
                             </div>
 
                             <div class="form-group">
-                                <label for="">Country</label>
-                                <input type="text" class="form-control" placeholder="Enter Your Country Name">
+                                <label for="" class="text-capitalize">@lang('home/register.country')</label>
+                                <input type="text" class="form-control"
+                                       placeholder="@lang('home/register.your_country')">
                             </div>
 
 
                             <div class="form-group">
-                                <label for="">Profile Picture</label>
+                                <label for="" class="text-capitalize">@lang('home/register.profile_picture') </label>
                                 <input type="file" class="form-control">
                             </div>
 
@@ -540,7 +527,8 @@
                             </div>
 
                             <div class="form-group">
-                                <button type="submit" class="btn btn-default"><span class="fa fa-check"></span> Register
+                                <button type="submit" class="btn btn-default text-uppercase"><span
+                                            class="fa fa-check"></span> @lang('home/navigation.register')
                                 </button>
                             </div>
 
@@ -549,26 +537,29 @@
                     </div>
                     <div class="col-xs-12 col-sm-2"></div>
                     <div class="col-xs-12 col-sm-5" id="login_section">
-                        <h3>LOGIN TO YOUR ACCOUNT</h3>
+                        <h3 class="text-uppercase">@lang('home/register.login_to_account')</h3>
 
                         <form action="" class="form-horizontal wow slideInRight">
 
                             <div class="form-group">
-                                <label for="">Email</label>
-                                <input type="email" class="form-control" placeholder="Enter Your Email">
+                                <label for="" class="text-capitalize">@lang('home/contact.your_email')</label>
+                                <input type="email" class="form-control" placeholder="@lang('home/contact.your_email')">
                             </div>
 
                             <div class="form-group">
-                                <label for="">Password</label>
-                                <input type="password" class="form-control" placeholder="Enter Your Valid Password">
+                                <label for="" class="text-capitalize">@lang('home/register.password')</label>
+                                <input type="password" class="form-control"
+                                       placeholder="@lang('home/register.your_password')">
 
                             </div>
                             <!--addition starts here-->
                             <div class="group">
-                                <a href="#forget_password_modal" data-toggle="modal">Forgot Your Password</a>
+                                <a href="#forget_password_modal" data-toggle="modal"
+                                   class="text-capitalize">@lang('home/register.forgot_password')</a>
                                 <br>
-                                <label for="remember_me"><input type="checkbox" id="remember_me"> Keep Me Logged
-                                    In</label>
+                                <label for="remember_me" class="text-capitalize">
+                                    <input type="checkbox" id="remember_me"> @lang('home/register.keep_logged_in')
+                                </label>
                             </div>
                             <br>
                             <div class="form-group">
