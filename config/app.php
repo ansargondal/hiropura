@@ -151,6 +151,7 @@ return [
          * Package Service Providers...
          */
 
+
         /*
          * Application Service Providers...
          */
@@ -161,8 +162,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         Dimsav\Translatable\TranslatableServiceProvider::class,
         Akaunting\Language\Provider::class,
-
-
+        \App\Providers\ComposerServiceProvider::class,
     ],
 
     /*

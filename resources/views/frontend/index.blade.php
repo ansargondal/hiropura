@@ -34,13 +34,9 @@
                                                         data-toggle="dropdown"><span
                                                 class="glyphicon glyphicon-arrow-down"></span> </a>
                                     <ul class="dropdown-menu">
-                                        <li>Bars</li>
-                                        <li>Restaurants</li>
-                                        <li>Clubs</li>
-                                        <li>Hotels</li>
-                                        <li>Hotels</li>
-                                        <li>Hotels</li>
-                                        <li>Hotels</li>
+                                        @foreach($categories as $category)
+                                            <li>{{$category->name}}</li>
+                                        @endforeach
                                     </ul>
                                 </li>
                             </ul>

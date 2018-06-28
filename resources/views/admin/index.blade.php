@@ -39,8 +39,6 @@
                     </div>
                 </div>
             </div>
-
-
             <section class="xs-12" id="page_content">
                 <div class="button_container">
                     <h2>Admin Panel</h2>
@@ -48,8 +46,6 @@
                         <span class="fa fa-bars"></span> <span class="star"></span>
                     </button>
                 </div>
-
-
                 <div class="container-fluid">
 
                     <div class="row">
