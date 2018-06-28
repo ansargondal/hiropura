@@ -5,9 +5,21 @@
 
     <nav class="navbar navbar-default navbar-fixed-top">
 
-        <ul class="language">
-            <li><a href="">Japanese</a></li>
-            <li><a href="">English</a></li>
+        {{--<ul class="language">--}}
+        {{--@foreach (language()->allowed() as $code => $name)--}}
+        {{--<li><a href="{{ language()->back($code) }}">{{ $name }}</a></li>--}}
+        {{--@endforeach--}}
+        {{--</ul>--}}
+        <ul class="{{ config('language.flags.ul_class') }} language">
+            @foreach (language()->allowed() as $code => $name)
+                <li class="{{ config('language.flags.li_class') }}">
+                    <a href="{{ language()->back($code) }}">
+                        <img src="{{ asset('flags/'.strtolower($code).'.png') }}"
+                             alt="{{ $name }}" width="{{ config('language.flags.width') }}"/>
+                        {{--&nbsp; {{ $name }}--}}
+                    </a>
+                </li>
+            @endforeach
         </ul>
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">

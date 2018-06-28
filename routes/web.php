@@ -6,13 +6,17 @@ require_once 'backend/backend.php';
 require_once 'frontend/frontend.php';
 
 
-Route::get('/{locale}/translations', function ($locale) {
+Route::group(['middleware' => 'language'], function () {
 
-    app()->setLocale($locale);
+    Route::get('/translations/myowntranslations', function () {
 
-    echo __('About');
+        echo app()->getLocale();
+
+        echo __('About');
 //    $category = \App\Category::first();
 //    dump($category->name);
-    die;
+        die;
+    });
+
 });
 

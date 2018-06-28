@@ -78,7 +78,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'jp',
 
     /*
     |--------------------------------------------------------------------------
@@ -160,6 +160,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         Dimsav\Translatable\TranslatableServiceProvider::class,
+        Akaunting\Language\Provider::class,
 
 
     ],
@@ -210,6 +211,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        'Language' => Akaunting\Language\Facade::class,
 
     ],
 

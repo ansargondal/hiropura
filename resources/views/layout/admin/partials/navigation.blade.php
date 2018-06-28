@@ -4,15 +4,17 @@
     <nav class="navbar navbar-default navbar-fixed-top">
 
         <ul class="language">
-            <li><a href="">Japanese</a></li>
-            <li><a href="">English</a></li>
+            @foreach (language()->allowed() as $code => $name)
+                <a href="{{ language()->back($code) }}">{{ $name }}</a>
+            @endforeach
         </ul>
         <div class="navbar-header">
 
 
-            <a href="{{route('admin')}}" class="navbar-brand" title="Hiropura logo"><img src="{{asset('images/logo_english.png')}}"
-                                                                                 class="img-responsive"
-                                                                                 alt="hiropura logo"></a>
+            <a href="{{route('admin')}}" class="navbar-brand" title="Hiropura logo"><img
+                        src="{{asset('images/logo_english.png')}}"
+                        class="img-responsive"
+                        alt="hiropura logo"></a>
         </div>
 
         <h4 class="hidden-xs">Advertise On Hiropura With No Time Limit And Totally Free</h4>
