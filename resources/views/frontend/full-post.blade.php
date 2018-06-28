@@ -64,26 +64,21 @@
                             <td>+81 82 247 0787</td>
                             <td> Shigeishi bldg 1F, 1-7-19, Otemachi, Naka-ku, Hiroshima</td>
                         </tr>
-
                         <tr>
                             <th colspan="2" class="text-capitalize">@lang('home/contact.email')</th>
                             <th>URL</th>
                         </tr>
-
                         <tr>
                             <td colspan="2">email@email.com</td>
                             <td>www.companywebsite.com</td>
                         </tr>
-
                         <tr>
                             <td colspan="3" id="heading" class="text-capitalize">
                                 @lang('posts/post.description')
                             </td>
                         </tr>
-
                         <tr>
                             <td colspan="3">
-
                                 店内は昭和30年代の建物をコンセプトに、 どこか懐かしく味わい深い造りになっています。内装はもちろん、置物やポスターなど隅々までこだわっています。
                                 お好み焼が焼き上がるまでの間、店内をいろいろ見回して下さい。ちょっとした発見があるかもしれません。
                             </td>
@@ -95,7 +90,6 @@
         </div>
     </main>
 @stop
-
 @section('js')
     <script src="{{asset('js/blueimp-gallery.min.js')}}"></script>
     <script src="{{asset('js/blueimp-gallery-fullscreen.js')}}"></script>

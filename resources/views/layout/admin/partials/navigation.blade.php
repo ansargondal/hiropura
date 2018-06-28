@@ -3,16 +3,22 @@
 
     <nav class="navbar navbar-default navbar-fixed-top">
 
-        <ul class="language">
+        <ul class="{{ config('language.flags.ul_class') }} language">
             @foreach (language()->allowed() as $code => $name)
-                <a href="{{ language()->back($code) }}">{{ $name }}</a>
+                <li class="{{ config('language.flags.li_class') }}">
+                    <a href="{{ language()->back($code) }}">
+                        <img src="{{ asset('flags/'.strtolower($code).'.png') }}"
+                             alt="{{ $name }}" width="{{ config('language.flags.width') }}"/>
+                        {{--&nbsp; {{ $name }}--}}
+                    </a>
+                </li>
             @endforeach
         </ul>
         <div class="navbar-header">
 
 
-            <a href="{{route('admin')}}" class="navbar-brand" title="Hiropura logo"><img
-                        src="{{asset('images/logo_english.png')}}"
+            <a href="{{route('frontend.index')}}" class="navbar-brand" title="Hiropura logo"><img
+                        src="{{asset('images/') . '/'. app()->getLocale() . '.png'}}"
                         class="img-responsive"
                         alt="hiropura logo"></a>
         </div>
