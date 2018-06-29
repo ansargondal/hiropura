@@ -16,3 +16,4 @@ public/css
 public/js
 public/vendor
 public/images
+public/faker/**/*
