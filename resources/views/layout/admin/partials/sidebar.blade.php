@@ -1,7 +1,7 @@
 <section id="sidebar">
     <h4>Dashboard</h4>
     <ul id="main_list">
-        <li><a href="{{route('admin')}}">Main</a></li>
+        <li><a href="{{route('admin.home')}}">Main</a></li>
         <li class="has_sublist"><a href="#posts_list" data-toggle="collapse"
                                    aria-controls="posts_list">Posts</a> <span
                     class="fa fa-caret-down"></span>
@@ -12,7 +12,7 @@
                 </li>
                 <li><a href="{{route('admin.posts.rejected')}}"> <span class="fa fa-trash"></span> Rejected Posts</a>
                 </li>
-                <li><a href="{{route('admin.posts')}}"> <span class="fa fa-list"></span> View All Posts</a></li>
+                <li><a href="{{route('admin.posts.index')}}"> <span class="fa fa-list"></span> View All Posts</a></li>
             </ul>
         </li>
         <li class="has_sublist"><a href="#categories_list" data-toggle="collapse"

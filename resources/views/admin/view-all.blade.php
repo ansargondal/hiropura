@@ -2,11 +2,8 @@
 @section('title', 'All Posts | Hiropura')
 @section('content')
     <main id="main_content" class="container-fluid">
-
         <div class="row">
-
             @include('layout.admin.partials.sidebar')
-
             <div id="add_categories_modal" class="modal fade">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -52,12 +49,8 @@
                         <span class="fa fa-bars"></span> <span class="star">*</span>
                     </button>
                 </div>
-
-
                 <div class="container-fluid">
-
                     <div class="row">
-
                         <div class="table-responsive">
                             <table class="table">
                                 <thead>
@@ -65,37 +58,31 @@
                                     <th>Company Name</th>
                                     <th>Location</th>
                                     <th>Contact Number</th>
-                                    <th>Image 1</th>
-                                    <th>Image 2</th>
-                                    <th></th>
+                                    <th>Image</th>
+                                    <th>Image</th>
+                                    <th>Action</th>
                                 </tr>
                                 </thead>
-
                                 <tbody>
-                                <tr>
-                                    <td>Company 1</td>
-                                    <td>Al Rehman Trade Center shop no. FF 141 Sargodha</td>
-                                    <td>0900-78601</td>
-                                    <td><img src="../images/bakeries_cakeshop.jpg" class="img-responsive"
-                                             alt="company image 1"></td>
-                                    <td><img src="../images/electrical_store.jpg" class="img-responsive"
-                                             alt="company image 2"></td>
-                                    <td><a href="#edit_modal" data-toggle="modal"
-                                           class=" btn btn-default fa fa-edit"></a></td>
-                                </tr>
-                                <tr>
-                                    <td>Company 1</td>
-                                    <td>Al Rehman Trade Center shop no. FF 141 Sargodha</td>
-                                    <td>0900-78601</td>
-                                    <td><img src="../images/bakeries_cakeshop.jpg" class="img-responsive"
-                                             alt="company image 1"></td>
-                                    <td><img src="../images/electrical_store.jpg" class="img-responsive"
-                                             alt="company image 2"></td>
-                                    <td><a href="#edit_modal" data-toggle="modal"
-                                           class=" btn btn-default fa fa-edit"></a></td>
-                                </tr>
+                                @foreach($posts as $post)
+                                    <tr>
+                                        <td class="text-capitalize">{{$post->title}}</td>
+                                        <td class="text-capitalize">{{$post->location}}</td>
+                                        <td>{{$post->contact}}</td>
+                                        @foreach($post->images as $image)
+                                            <td>
+                                                <img src="{{asset('faker/images') . '/' .$image->path}}"
+                                                     class="img-responsive"
+                                                     alt="first Image">
+                                            </td>
+                                        @endforeach
+                                        <td>
+                                            <a href="#edit_modal" data-toggle="modal"
+                                               class=" btn btn-default fa fa-edit"></a>
+                                        </td>
+                                    </tr>
+                                @endforeach
                                 </tbody>
-
                             </table>
                         </div>
 

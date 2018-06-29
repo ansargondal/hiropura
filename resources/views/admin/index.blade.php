@@ -91,12 +91,9 @@
                                     </div>
                                 </section>
                             </a>
-
                         </div>
-
                         <div class="col-xs-12 col-sm-6 col-md-3">
-
-                            <a href="{{route('admin.posts')}}">
+                            <a href="{{route('admin.posts.index')}}">
                                 <section>
                                     <h4>All Posts</h4>
                                     <div class="group">
