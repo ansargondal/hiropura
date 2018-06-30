@@ -74,15 +74,11 @@
                 <div class="button_container">
                     <h2>Messages</h2>
                     <button id="toggle_sidebar" class="btn btn-default">
-                        <span class="fa fa-bars"></span> <span class="star">*</span>
+                        <span class="fa fa-bars"></span> <span class="star"></span>
                     </button>
                 </div>
-
-
                 <div class="container-fluid">
-
                     <div class="row">
-
                         <div class="table-responsive">
                             <table class="table">
                                 <colgroup>
@@ -111,7 +107,6 @@
                                             <a href="" class="btn btn-default" title="Delete Message">
                                                 <span class="fa fa-trash"></span>
                                             </a>
-
                                         </td>
                                     </tr>
                                 @endforeach

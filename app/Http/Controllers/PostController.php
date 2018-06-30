@@ -14,9 +14,16 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::with('images')->withCount('images')->get();
+        $posts = Post::with('images')->withCount('images')->paginate(5);
 
-        return view('admin.view-all', compact('posts'));
+        return view('admin.post.all', compact('posts'));
+    }
+
+    public function posts($status)
+    {
+        $posts = Post::whereStatus($status)->with('images')
+            ->withcount('images')->paginate(5);
+        return view("admin.post.{$status}", compact('posts'));
     }
 
     /**

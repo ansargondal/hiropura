@@ -51,11 +51,11 @@
                     <div class="row">
                         <div class="col-xs-12 col-sm-6 col-md-3">
 
-                            <a href="{{route('admin.posts.pending')}}">
+                            <a href="{{route('admin.posts.status', 'pending')}}">
                                 <section>
                                     <h4 class="pending">Pending Posts</h4>
                                     <div class="group">
-                                        <span>0</span> <br><br>
+                                        <span>{{$postInfo['pendingPostsCount']}}</span> <br><br>
 
                                         <span class="fa fa-user"> Click To View</span>
                                     </div>
@@ -66,11 +66,11 @@
 
                         <div class="col-xs-12 col-sm-6 col-md-3">
 
-                            <a href="{{route('admin.posts.approved')}}">
+                            <a href="{{route('admin.posts.status', 'approved')}}">
                                 <section>
                                     <h4 class="approved">Approved Post</h4>
                                     <div class="group">
-                                        <span>3</span> <br><br>
+                                        <span>{{$postInfo['approvedPostsCount']}}</span> <br><br>
 
                                         <span class="fa fa-comment-o"> Click To View</span>
                                     </div>
@@ -81,12 +81,11 @@
 
                         <div class="col-xs-12 col-sm-6 col-md-3">
 
-                            <a href="{{route('admin.posts.rejected')}}">
+                            <a href="{{route('admin.posts.status', 'rejected')}}">
                                 <section>
                                     <h4 class="rejected">Rejected Posts</h4>
                                     <div class="group">
-                                        <span>2</span> <br><br>
-
+                                        <span>{{$postInfo['rejectedPostsCount']}}</span> <br><br>
                                         <span class="fa fa-trash"> Click To View</span>
                                     </div>
                                 </section>
@@ -97,8 +96,7 @@
                                 <section>
                                     <h4>All Posts</h4>
                                     <div class="group">
-                                        <span>5</span> <br><br>
-
+                                        <span>{{$postInfo['postsCount']}}</span> <br><br>
                                         <span class="fa fa-list"> Click To View</span>
                                     </div>
                                 </section>

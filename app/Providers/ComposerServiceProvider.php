@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Http\ViewComposers\CategoryComposer;
+use App\Http\ViewComposers\PostComposer;
 use Illuminate\Support\ServiceProvider;
 
 class ComposerServiceProvider extends ServiceProvider
@@ -15,6 +16,7 @@ class ComposerServiceProvider extends ServiceProvider
     public function boot()
     {
         view()->composer('frontend.*', CategoryComposer::class);
+        view()->composer('admin.*', PostComposer::class);
     }
 
     /**

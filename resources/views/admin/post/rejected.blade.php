@@ -2,11 +2,8 @@
 @section('title', 'Dashboard | Hiropura')
 @section('content')
     <main id="main_content" class="container-fluid">
-
         <div class="row">
-
             @include('layout.admin.partials.sidebar')
-
             <div id="add_categories_modal" class="modal fade">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -15,30 +12,23 @@
                             <h4 class="modal-title">Add Category</h4>
                         </div>
                         <div class="modal-body">
-
                             <form action="" class="form-horizontal">
                                 <div class="form-group">
                                     <label for="">Category Name (English)</label>
                                     <input type="text" class="form-control"
                                            placeholder="Enter Category Name In English">
                                 </div>
-
                                 <!--added category name in japanese-->
-
                                 <div class="form-group">
                                     <label for="">Category Name (Japanese)</label>
                                     <input type="text" class="form-control"
                                            placeholder="Enter Category Name In Japanese">
                                 </div>
-
                                 <!--added category name in japanese-->
-
                                 <div class="form-group">
                                     <button type="submit" class="btn btn-default">Add Category</button>
                                 </div>
-
                             </form>
-
                         </div>
                     </div>
                 </div>
@@ -46,9 +36,9 @@
 
             <section class="xs-12" id="page_content">
                 <div class="button_container">
-                    <h2>Pending Post</h2>
+                    <h2>Rejected Post</h2>
                     <button id="toggle_sidebar" class="btn btn-default">
-                        <span class="fa fa-bars"></span> <span class="star">*</span>
+                        <span class="fa fa-bars"></span> <span class="star"></span>
                     </button>
                 </div>
 
@@ -64,43 +54,37 @@
                                     <th>Company Name</th>
                                     <th>Location</th>
                                     <th>Contact Number</th>
-                                    <th>Image 1</th>
-                                    <th>Image 2</th>
-                                    <th></th>
+                                    <th>Image</th>
+                                    <th>Image</th>
+                                    <th>Actions</th>
                                 </tr>
                                 </thead>
 
                                 <tbody>
-                                <tr>
-                                    <td>Company 1</td>
-                                    <td>Al Rehman Trade Center shop no. FF 141 Sargodha</td>
-                                    <td>0900-78601</td>
-                                    <td><a href="#image_view_modal" data-toggle="modal"><img
-                                                    src="../images/bakeries_cakeshop.jpg" class="img-responsive"
-                                                    alt="company image 1"></a></td>
-                                    <td><a href="#image_view_modal" data-toggle="modal"><img
-                                                    src="../images/electrical_store.jpg" class="img-responsive"
-                                                    alt="company image 2"></a></td>
-                                    <td><a href="#edit_modal" data-toggle="modal"
-                                           class=" btn btn-default fa fa-edit"></a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Company 1</td>
-                                    <td>Al Rehman Trade Center shop no. FF 141 Sargodha</td>
-                                    <td>0900-78601</td>
-                                    <td><a href="#image_view_modal" data-toggle="modal"><img
-                                                    src="../images/bakeries_cakeshop.jpg" class="img-responsive"
-                                                    alt="company image 1"></a></td>
-                                    <td><a href="#image_view_modal" data-toggle="modal"><img
-                                                    src="../images/electrical_store.jpg" class="img-responsive"
-                                                    alt="company image 2"></a></td>
-                                    <td><a href="#edit_modal" data-toggle="modal"
-                                           class=" btn btn-default fa fa-edit"></a>
-                                    </td>
-                                </tr>
-                                </tbody>
 
+                                @foreach($posts as $post)
+                                    <tr>
+                                        <td class="text-capitalize">{{$post->title}}</td>
+                                        <td class="text-capitalize">{{$post->location}}</td>
+                                        <td>{{$post->contact}}</td>
+                                        @foreach($post->images as $image)
+                                            <td>
+                                                <img src="{{asset('faker/images') . '/' .$image->path}}"
+                                                     class="img-responsive"
+                                                     alt="first Image">
+                                            </td>
+                                            {{--add empty td if a post has only one image--}}
+                                            {!! $post->images_count < 2 ? '
+                                            <td></td>
+                                            ' : '' !!}
+                                        @endforeach
+                                        <td>
+                                            <a href="#edit_modal" data-toggle="modal"
+                                               class=" btn btn-default fa fa-edit"></a>
+                                        </td>
+                                    </tr>
+                                @endforeach
+                                </tbody>
                             </table>
                         </div>
 
@@ -202,8 +186,6 @@
 
                                                 <a href="#" class="btn btn-default">Delete</a>
 
-                                                <a href="#" class="btn btn-default">Reject</a>
-
                                                 <button type="submit" class="btn btn-default">Approve</button>
                                             </div>
                                         </form>
@@ -212,33 +194,18 @@
                                 </div>
                             </div>
                         </div>
-
-                    </div>
-
-                </div>
-
-                <ol class="pagination">
-                    <li><a href="#">&laquo;</a></li>
-                    <li class="active"><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">5</a></li>
-                    <li><a href="#">&raquo;</a></li>
-                </ol>
-                <div class="modal fade" id="image_view_modal">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button class="close" data-dismiss="modal">&times;</button>
-                                <h4 class="modal-title">Image Preview</h4>
-                            </div>
-                            <div class="modal-body">
-                                <img src="../images/contact_us.jpg" class="img-responsive" alt="">
-                            </div>
-                        </div>
                     </div>
                 </div>
+                {{$posts->links()}}
+                {{--<ol class="pagination">--}}
+                    {{--<li><a href="#">&laquo;</a></li>--}}
+                    {{--<li class="active"><a href="#">1</a></li>--}}
+                    {{--<li><a href="#">2</a></li>--}}
+                    {{--<li><a href="#">3</a></li>--}}
+                    {{--<li><a href="#">4</a></li>--}}
+                    {{--<li><a href="#">5</a></li>--}}
+                    {{--<li><a href="#">&raquo;</a></li>--}}
+                {{--</ol>--}}
             </section>
         </div>
     </main>

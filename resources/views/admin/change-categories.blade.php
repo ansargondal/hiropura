@@ -75,7 +75,7 @@
                 <div class="button_container">
                     <h2>Change Categories</h2>
                     <button id="toggle_sidebar" class="btn btn-default">
-                        <span class="fa fa-bars"></span> <span class="star">*</span>
+                        <span class="fa fa-bars"></span> <span class="star"></span>
                     </button>
                 </div>
 

@@ -12,7 +12,6 @@
                             <h4 class="modal-title">Add Category</h4>
                         </div>
                         <div class="modal-body">
-
                             <form action="" class="form-horizontal">
                                 <div class="form-group">
                                     <label for="">Category Name (English)</label>
@@ -44,9 +43,9 @@
 
             <section class="xs-12" id="page_content">
                 <div class="button_container">
-                    <h2>Rejected Post</h2>
+                    <h2>All Posts</h2>
                     <button id="toggle_sidebar" class="btn btn-default">
-                        <span class="fa fa-bars"></span> <span class="star">*</span>
+                        <span class="fa fa-bars"></span> <span class="star"></span>
                     </button>
                 </div>
                 <div class="container-fluid">
@@ -75,6 +74,10 @@
                                                      class="img-responsive"
                                                      alt="first Image">
                                             </td>
+                                            {{--add empty td if a post has only one image--}}
+                                            {!! $post->images_count < 2 ? '
+                                            <td></td>
+                                            ' : '' !!}
                                         @endforeach
                                         <td>
                                             <a href="#edit_modal" data-toggle="modal"
@@ -195,15 +198,16 @@
 
                 </div>
 
-                <ol class="pagination">
-                    <li><a href="#">&laquo;</a></li>
-                    <li class="active"><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">5</a></li>
-                    <li><a href="#">&raquo;</a></li>
-                </ol>
+                {{$posts->links()}}
+                {{--<ol class="pagination">--}}
+                {{--<li><a href="#">&laquo;</a></li>--}}
+                {{--<li class="active"><a href="#">1</a></li>--}}
+                {{--<li><a href="#">2</a></li>--}}
+                {{--<li><a href="#">3</a></li>--}}
+                {{--<li><a href="#">4</a></li>--}}
+                {{--<li><a href="#">5</a></li>--}}
+                {{--<li><a href="#">&raquo;</a></li>--}}
+                {{--</ol>--}}
             </section>
         </div>
     </main>

@@ -8,6 +8,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
         return view('admin.index');
     })->name('home');
 
+    Route::get('posts/{status}', 'PostController@posts')->name('posts.status');
     Route::resource('posts', 'PostController');
 });
 
@@ -17,22 +18,7 @@ Route::get('/admin/change-categories', function () {
 })->name('admin.change.categories');
 
 
-Route::get('/admin/posts/pending', function () {
-    return view('admin.post.pending-posts');
-})->name('admin.posts.pending');
-
-
-Route::get('/admin/posts/approved', function () {
-    return view('admin.post.approved-post');
-})->name('admin.posts.approved');
-
-
-Route::get('/admin/posts/rejected', function () {
-    return view('admin.post.rejected-post');
-})->name('admin.posts.rejected');
-
-
-Route::get('/admin/login', function () {
+Route::get('admin/login', function () {
     return view('admin.login');
 })->name('admin.login');
 

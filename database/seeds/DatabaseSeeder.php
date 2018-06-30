@@ -27,12 +27,13 @@ class DatabaseSeeder extends Seeder
         $users = factory(User::class, 2)->create();
 
         $users->each(function ($user) {
+
             $user->messages()->saveMany(factory(Message::class, 10)->make());
 
             $posts = $user->posts()->saveMany(factory(Post::class, 3)->make());
 
             $posts->each(function ($post) {
-                $post->postImages()->save(factory(PostImage::class)->make());
+                $post->images()->save(factory(PostImage::class)->make());
             });
         });
     }

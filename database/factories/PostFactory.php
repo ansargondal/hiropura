@@ -3,6 +3,8 @@
 use Faker\Generator as Faker;
 
 $factory->define(App\Post::class, function (Faker $faker) {
+
+    $status = ['pending', 'approved', 'rejected'];
     return [
         'title' => $faker->sentence,
         'contact' => $faker->phoneNumber,
@@ -10,6 +12,6 @@ $factory->define(App\Post::class, function (Faker $faker) {
         'email' => $faker->email,
         'url' => $faker->url,
         'body' => $faker->paragraph,
-        'status' => array_rand([0, 1, -1])
+        'status' => $status[array_rand($status)]
     ];
 });

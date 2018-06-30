@@ -6,11 +6,14 @@
                                    aria-controls="posts_list">Posts</a> <span
                     class="fa fa-caret-down"></span>
             <ul id="posts_list" class="collapse collapseable">
-                <li><a href="{{route('admin.posts.pending')}}"> <span class="fa fa-user"></span> Pending Posts</a></li>
-                <li><a href="{{route('admin.posts.approved')}}"> <span class="fa fa-comment-o"></span> Approved
+                <li><a href="{{route('admin.posts.status', 'pending')}}"> <span class="fa fa-user"></span> Pending
+                        Posts</a></li>
+                <li><a href="{{route('admin.posts.status', 'approved')}}"> <span class="fa fa-comment-o"></span>
+                        Approved
                         Posts</a>
                 </li>
-                <li><a href="{{route('admin.posts.rejected')}}"> <span class="fa fa-trash"></span> Rejected Posts</a>
+                <li><a href="{{route('admin.posts.status', 'rejected')}}"> <span class="fa fa-trash"></span> Rejected
+                        Posts</a>
                 </li>
                 <li><a href="{{route('admin.posts.index')}}"> <span class="fa fa-list"></span> View All Posts</a></li>
             </ul>

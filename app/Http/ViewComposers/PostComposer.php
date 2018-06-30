@@ -10,10 +10,11 @@ class PostComposer
     public function compose(View $view)
     {
         $postInfo = [
-            'PendingPostsCount' => 30,
-            'rejectedPostsCount' => 10,
-            'postsCount' => post::count()
+            'pendingPostsCount' => Post::whereStatus('pending')->count(),
+            'rejectedPostsCount' => Post::whereStatus('rejected')->count(),
+            'approvedPostsCount' => Post::whereStatus('approved')->count(),
+            'postsCount' => Post::count(),
         ];
-        $view->with('categories', $postInfo);
+        $view->with('postInfo', $postInfo);
     }
 }

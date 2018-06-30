@@ -1,7 +1,6 @@
 @extends('layout.admin.app')
 @section('title', 'Dashboard | Hiropura')
 @section('content')
-
     <main id="main_content" class="container-fluid">
 
         <div class="row">
@@ -47,9 +46,9 @@
 
             <section class="xs-12" id="page_content">
                 <div class="button_container">
-                    <h2>Rejected Post</h2>
+                    <h2>Approved Post</h2>
                     <button id="toggle_sidebar" class="btn btn-default">
-                        <span class="fa fa-bars"></span> <span class="star">*</span>
+                        <span class="fa fa-bars"></span> <span class="star"></span>
                     </button>
                 </div>
 
@@ -65,37 +64,38 @@
                                     <th>Company Name</th>
                                     <th>Location</th>
                                     <th>Contact Number</th>
-                                    <th>Image 1</th>
-                                    <th>Image 2</th>
-                                    <th></th>
+                                    <th>Image</th>
+                                    <th>Image</th>
+                                    <th>Actions</th>
                                 </tr>
                                 </thead>
 
                                 <tbody>
-                                <tr>
-                                    <td>Company 1</td>
-                                    <td>Al Rehman Trade Center shop no. FF 141 Sargodha</td>
-                                    <td>0900-78601</td>
-                                    <td><img src="../images/bakeries_cakeshop.jpg" class="img-responsive"
-                                             alt="company image 1"></td>
-                                    <td><img src="../images/electrical_store.jpg" class="img-responsive"
-                                             alt="company image 2"></td>
-                                    <td><a href="#edit_modal" data-toggle="modal"
-                                           class=" btn btn-default fa fa-edit"></a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Company 1</td>
-                                    <td>Al Rehman Trade Center shop no. FF 141 Sargodha</td>
-                                    <td>0900-78601</td>
-                                    <td><img src="../images/bakeries_cakeshop.jpg" class="img-responsive"
-                                             alt="company image 1"></td>
-                                    <td><img src="../images/electrical_store.jpg" class="img-responsive"
-                                             alt="company image 2"></td>
-                                    <td><a href="#edit_modal" data-toggle="modal"
-                                           class=" btn btn-default fa fa-edit"></a>
-                                    </td>
-                                </tr>
+
+
+                                @foreach($posts as $post)
+                                    <tr>
+                                        <td class="text-capitalize">{{$post->title}}</td>
+                                        <td class="text-capitalize">{{$post->location}}</td>
+                                        <td>{{$post->contact}}</td>
+                                        @foreach($post->images as $image)
+                                            <td>
+                                                <img src="{{asset('faker/images') . '/' .$image->path}}"
+                                                     class="img-responsive"
+                                                     alt="first Image">
+                                            </td>
+                                            {{--add empty td if a post has only one image--}}
+                                            {!! $post->images_count < 2 ? '
+                                            <td></td>
+                                            ' : '' !!}
+                                        @endforeach
+                                        <td>
+                                            <a href="#edit_modal" data-toggle="modal"
+                                               class=" btn btn-default fa fa-edit"></a>
+                                        </td>
+                                    </tr>
+                                @endforeach
+
                                 </tbody>
 
                             </table>
@@ -197,9 +197,9 @@
 
                                             <div class="form-group">
 
-                                                <a href="#" class="btn btn-default">Delete</a>
+                                                <a href="#" class="btn btn-default">Reject</a>
 
-                                                <button type="submit" class="btn btn-default">Approve</button>
+                                                <button type="submit" class="btn btn-default">Delete</button>
                                             </div>
                                         </form>
 
@@ -207,18 +207,28 @@
                                 </div>
                             </div>
                         </div>
+
                     </div>
+
                 </div>
-                <ol class="pagination">
-                    <li><a href="#">&laquo;</a></li>
-                    <li class="active"><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">5</a></li>
-                    <li><a href="#">&raquo;</a></li>
-                </ol>
+
+                {{$posts->links()}}
+
+                {{--
+                            <ol class="pagination">
+                                <li><a href="#">&laquo;</a></li>
+                                <li class="active"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#">&raquo;</a></li>
+                            </ol>--}}
+
             </section>
+
         </div>
+
     </main>
 @stop
+
